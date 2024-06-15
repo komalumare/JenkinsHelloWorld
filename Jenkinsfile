@@ -16,13 +16,7 @@ pipeline {
 
         stage('Email') {
             steps {
-                emailext (
-                    subject: "Build Notification",
-                    body: "Hello, your build is complete.",
-                    to: "te415606@gmail.com",
-                    recipientProviders: [[$class: 'DevelopersRecipientProvider']],
-                    attachmentsPattern: '**/target/*.jar',
-                )
+                mail bcc: '', body: 'Build successful', cc: '', from: '', replyTo: '', subject: 'Sample Subject', to: 'te415606@gmail.com'
             }
         }
     }
