@@ -14,10 +14,6 @@ pipeline {
             }
         }
 
-        stage('Email') {
-            steps {
-                mail bcc: '', body: 'Build successful', cc: '', from: '', replyTo: '', subject: 'Sample Subject', to: 'te415606@gmail.com'
-            }
-        }
+        
     }
 }
