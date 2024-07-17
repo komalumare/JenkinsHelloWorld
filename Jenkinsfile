@@ -13,7 +13,5 @@ pipeline {
                 bat "java HelloWorld"
             }
         }
-
-        
     }
 }
